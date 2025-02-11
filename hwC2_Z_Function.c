@@ -34,8 +34,8 @@ int main()
 {
     char str1[105], str2[105];
 
-    fgets(str1, 105, stdin);
-    fgets(str2, 105, stdin);
+    scanf("%s",str1);
+    scanf("%s",str2);
 
 
     str1[strlen(str1)] = '\0';
