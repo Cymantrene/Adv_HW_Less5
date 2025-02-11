@@ -44,8 +44,8 @@ int main()
     int len1 = strlen(str1);
     int len2 = strlen(str2);
 
-    int max_prefix_suffix = 0;
-    int max_suffix_prefix = 0;
+    int MaxPrefSuf = 0;
+    int MaxSufPref = 0;
 
 
     char concat1[210];
@@ -56,9 +56,9 @@ int main()
 
     for (int i = len2 ; i < len2 + len1 ; i++)
     {
-        if (z1[i] > max_prefix_suffix)
+        if (z1[i] > MaxPrefSuf)
         {
-            max_prefix_suffix = z1[i];
+           MaxPrefSuf = z1[i];
         }
     }
 
@@ -72,14 +72,14 @@ int main()
 
     for (int i = len1 ; i < len1 + len2 ; i++)
     {
-        if (z2[i] > max_suffix_prefix)
+        if (z2[i] > MaxSufPref)
         {
-            max_suffix_prefix = z2[i];
+            MaxSufPref = z2[i];
         }
     }
 
 
-    printf("%d %d\n", max_suffix_prefix, max_prefix_suffix);
+    printf("%d %d\n", MaxSufPref, MaxPrefSuf);
 
     return 0;
 }
